@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class consoleExercises {
-    public  static void main(String[] args) {
+    public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("enter a number: ");
@@ -29,13 +29,13 @@ public class consoleExercises {
         double area = wt * lt;
 
         System.out.println("the area is:" + area);
-        double perimter = (2 * wt) + (2 * lt);
-        System.out.println("the perimeter is " + perimter);
+        double perimeter = 2 * wt + 2 * lt;
+        System.out.println("the perimeter is " + perimeter);
 
         System.out.println("what is the height");
         int ht = Integer.parseInt(scn.nextLine());
-        double volumen = perimter * ht;
-        System.out.println("the volume is " + volumen);
+        double volume = perimeter * ht;
+        System.out.println("the volume is " + volume);
 
     }
     }
