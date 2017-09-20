@@ -15,10 +15,10 @@ public class consoleExercises {
 
 //        scan.nextLine(); for prompt sentence question to work and get processed
 //          OR  this:
-   Scanner scn = new Scanner(System.in);
+        Scanner scn = new Scanner(System.in);
 
         System.out.println("Enter a sentence:");
-      String sentence = scn.nextLine();
+        String sentence = scn.nextLine();
 
 
         System.out.println("What is the width?");
@@ -38,6 +38,6 @@ public class consoleExercises {
         System.out.println("the volume is " + volume);
 
     }
-    }
+}
 
 
