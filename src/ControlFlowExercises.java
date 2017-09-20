@@ -81,7 +81,7 @@ public class ControlFlowExercises {
 
             System.out.println("continue?");
             str = grade.next();
-        } while (str.equalsIgnoreCase("y"));
+        } while (str.equalsIgnoreCase("yes"));
 
     }
 }
