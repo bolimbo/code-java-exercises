@@ -6,12 +6,12 @@ public class bonus {
         System.out.println("Enter a number and character");
         int number = scan.nextInt();
         String character = scan.next();
-       for (int num = 1;num<number; num++) {
-            for(int j = 0; j < num; j++){
+        for (int num = 1; num < number; num++) {
+            for (int k = 0; k < num; k++) {
 
-           System.out.print(character);
+                System.out.print(character);
             }
-           System.out.println();
-       }
+            System.out.println(); /*this makes it loop*/
+        }
     }
 }

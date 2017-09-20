@@ -9,10 +9,8 @@ public class animal {
         String pet = scan.nextLine();
         System.out.println("a " + pet + " how cute =)");
 
-        System.out.println("Is you " + pet  + " Male or Female?1" );
+        System.out.println("Is you " + pet + " Male or Female?1");
         String petGender = scan.nextLine();
-
-
 
 
         System.out.println("What is your " + pet + "'s" + " name?");
@@ -33,11 +31,11 @@ public class animal {
 
         if (petGender.equalsIgnoreCase("male")) {
             System.out.println(petName + " " + "its a boy");
-            System.out.println("I have a " + " " + petGender + " " + pet + ". " + "His name is " + petName + ". " + "He is a " + petBreed + " breed " + ". " +"His fur color is " + petColor + " color " + "and he is always " + petMood);
+            System.out.println("I have a " + " " + petGender + " " + pet + ". " + "His name is " + petName + ". " + "He is a " + petBreed + " breed " + ". " + "His fur color is " + petColor + " color " + "and he is always " + petMood);
 
-        } else if(petGender.equalsIgnoreCase("female")) {
+        } else if (petGender.equalsIgnoreCase("female")) {
             System.out.println(petName + " " + "its a girl");
-            System.out.println("I have a " + " " + petGender + " " + pet + ". " + "Her name is " + petName + ". " + "She is a " + petBreed + " breed " + ". " + "Her fur color is "+ petColor + " color " + "and she is always " + petMood + " .");
+            System.out.println("I have a " + " " + petGender + " " + pet + ". " + "Her name is " + petName + ". " + "She is a " + petBreed + " breed " + ". " + "Her fur color is " + petColor + " color " + "and she is always " + petMood + " .");
 
         }
 
@@ -47,9 +45,6 @@ public class animal {
 
     }
 }
-
-
-
 
 
 //    public void bark() {
