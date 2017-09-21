@@ -4,6 +4,7 @@ public class Bob {
     public static void main(String[] args) {
         String another;
 
+
         do {
             Scanner bob = new Scanner(System.in);
             System.out.println("Hi Im Bob, What do you want?");
@@ -15,7 +16,7 @@ public class Bob {
             } else if (userQuestion.endsWith("?")) {
                 System.out.println("Sure!!!");
 
-            } else if (userQuestion.equals(userQuestion.toUpperCase())) {
+            } else if (userQuestion.endsWith("!") || userQuestion.equals(userQuestion.toUpperCase()) && !userQuestion.isEmpty()){
                 System.out.println("Whoa, chill out!");
 
             }else
