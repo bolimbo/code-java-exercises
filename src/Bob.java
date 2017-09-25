@@ -25,6 +25,7 @@ public class Bob {
             System.out.println("do you want to continue?");
             another = bob.next();
         }while (another.equalsIgnoreCase("yes"));
+
     }
 
 }

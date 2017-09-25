@@ -3,7 +3,11 @@ import java.util.Scanner;
 public class animal {
     public static void main(String[] args) {
 
+
+
         Scanner scan = new Scanner(System.in);
+        animal theAnimal = new animal();
+
 
         System.out.println("What kind of pet do you have?!");
         String pet = scan.nextLine();
@@ -44,9 +48,13 @@ public class animal {
         }
         }
 
-
+    public animal() {
 
     }
+    public static void speakAnimal(animal pup) {
+        System.out.println("jj");
+    }
+}
 
 
 
