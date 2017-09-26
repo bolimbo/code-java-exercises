@@ -8,40 +8,36 @@ public class Input {
 
     String getString(String str) {
         System.out.println("enter a string");
-        String strn = scan.next();
+        String strn = scan.nextLine();
         return strn;
 
     }
 
     public boolean yesNo() {
         System.out.println("is yes or no?");
-        String str = scan.next();
-        if (str.equalsIgnoreCase("yes")) {
-            return true;
-        } else if (str.equalsIgnoreCase("no")) {
-            return false;
-        }
-        return false;
+        String str = scan.nextLine();
+        return  str.equalsIgnoreCase("yes");
+
     }
 
+
+
+    public int getInt() {
+        if (this.scan.hasNextInt()) {
+            return this.scan.nextInt();
+        } else {
+            System.out.println("Invalid input");
+            return getInt();
+        }
+    }
 
     public int getInt(int min, int max) {
-        int str1;
-        do {
-            System.out.println("enter integer between " + min + " " + max);
-            str1 = scan.nextInt();
-            if (str1 < min || str1 > max) {
-                System.out.println("not valid ");
-            }
-        } while (str1 < min || str1 > max);
-        return str1;
-    }
-
-
-    public int getInt(int n) {
-        System.out.println("enter a number");
-        n = scan.nextInt();
-        return n;
+      int userInput = getInt();
+        if (userInput < min || userInput > max){
+        System.out.println(userInput + " is not bwtween " +  min + " and " + max);
+        return getInt(min,max);
+}
+       return userInput;
     }
 
     public double getDouble(double min, double max) {
@@ -58,20 +54,22 @@ public class Input {
     }
 
 
-    public double getDouble(double n) {
-        System.out.println("enter a decimal");
-        scan.nextLine();
-        n = scan.nextDouble();
-        return n;
+    public double getDouble() {
+ if (this.scan.hasNextDouble()){
+ return this.scan.nextDouble();
+    } else {
+     System.out.println("that s not a double try again");
+ }
+        return getDouble();
     }
 
 
     public static void main(String[] args) {
         Input input = new Input();
         input.getInt(0, 100);
-        System.out.println("number entered " + input.getInt(3));
+        System.out.println("number entered " + input.getInt());
         input.getDouble(0.0, 100.0);
-        input.getDouble(100.0);
+        input.getDouble();
         input.yesNo();
         input.getString("carlo");
     }

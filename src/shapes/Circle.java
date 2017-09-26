@@ -7,17 +7,14 @@ public class Circle {
 
 //    private static Scanner scan = new Scanner(System.in);
 //    double area;
-    double radius;
+    private double radius;
 
     public Circle(double radius) {
         this.radius = radius;
     }
 
     public double getArea() {
-//        System.out.println("area?");
         double a = Math.PI * radius * radius;
-//        scan.nextDouble();
-//        System.out.println(a);
         return a;
 
     }
