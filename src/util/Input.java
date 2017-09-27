@@ -14,9 +14,9 @@ public class Input {
     }
 
     public boolean yesNo() {
-        System.out.println("is yes or no?");
-        String str = scan.nextLine();
-        return  str.equalsIgnoreCase("yes");
+        System.out.println("continue y/n?");
+        String str = scan.next();
+        return  str.equalsIgnoreCase("y");
 
     }
 
@@ -25,16 +25,18 @@ public class Input {
     public int getInt() {
         if (this.scan.hasNextInt()) {
             return this.scan.nextInt();
+
         } else {
             System.out.println("Invalid input");
             return getInt();
         }
+
     }
 
     public int getInt(int min, int max) {
       int userInput = getInt();
         if (userInput < min || userInput > max){
-        System.out.println(userInput + " is not bwtween " +  min + " and " + max);
+        System.out.println(userInput + " is not between " +  min + " and " + max);
         return getInt(min,max);
 }
        return userInput;
@@ -65,12 +67,15 @@ public class Input {
 
 
     public static void main(String[] args) {
-        Input input = new Input();
-        input.getInt(0, 100);
-        System.out.println("number entered " + input.getInt());
-        input.getDouble(0.0, 100.0);
-        input.getDouble();
-        input.yesNo();
-        input.getString("carlo");
+//        Input input = new Input();
+//        input.getInt(0, 100);
+//        System.out.println("number entered " + input.getInt());
+//        input.getDouble(0.0, 100.0);
+//        input.getDouble();
+//        input.yesNo();
+//        input.getString("carlo");
+        int x = 5 * 4 % 3;
+        System.out.println();
+
     }
 }
