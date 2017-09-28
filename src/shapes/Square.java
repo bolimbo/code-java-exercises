@@ -14,7 +14,7 @@ class Square extends Rectangle{
     }
 
     public double getArea(){
-        return super.getWidth() * super.getWidth();
+        return super.getWidth() * super.getLength();
     }
 
 
