@@ -1,4 +1,4 @@
-public class stringExercises {
+public class StringExercises {
     public static void main(String[] args) {
         String message = "i am the best" +"\n";
 
