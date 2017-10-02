@@ -6,8 +6,8 @@ public class Input {
     private static Scanner scan = new Scanner(System.in);
 
 
-    String getString(String str) {
-        System.out.println("enter a string");
+    public String getString(String str) {
+        System.out.println(str);
         String strn = scan.nextLine();
         return strn;
 
@@ -15,7 +15,7 @@ public class Input {
 
     public boolean yesNo() {
         System.out.println("continue y/n?");
-        String str = scan.next();
+        String str = scan.nextLine();
         return  str.equalsIgnoreCase("y");
 
     }

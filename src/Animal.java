@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class animal {
+public class Animal {
     public static void main(String[] args) {
 
 
 
         Scanner scan = new Scanner(System.in);
-        animal theAnimal = new animal();
+        Animal theAnimal = new Animal();
 
 
         System.out.println("What kind of pet do you have?!");
@@ -48,10 +48,10 @@ public class animal {
         }
         }
 
-    public animal() {
+    public Animal() {
 
     }
-    public static void speakAnimal(animal pup) {
+    public static void speakAnimal(Animal pup) {
         System.out.println("jj");
     }
 }

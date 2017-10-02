@@ -4,7 +4,7 @@ package util;
 //solutions from opp with z
 //methods from input go here
 
-public class inputTest {
+public class InputTest {
     public static void main(String[] args) {
         Input input = new Input();
 

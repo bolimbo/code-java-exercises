@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class bonus {
+public class Bonus {
     public static Scanner scan = new Scanner(System.in);
 
 

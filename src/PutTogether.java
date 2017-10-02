@@ -3,7 +3,7 @@ import util.Input;
 
 import java.util.Scanner;
 
-public class putTogether {
+public class PutTogether {
 //    private static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
