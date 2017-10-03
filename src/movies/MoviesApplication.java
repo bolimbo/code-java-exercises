@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 public class MoviesApplication {
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
 //        MoviesArray mv = new MoviesArray():
         Movie[] movies = MoviesArray.findAll();
         Input input = new Input();
@@ -89,6 +89,7 @@ public class MoviesApplication {
 
 
     }
+
 }
 
 

@@ -10,12 +10,18 @@ public class Student {
     private String name;
     private ArrayList<Integer> grades;
     private HashMap<String, String> attendance;
+//    private double percentages;
 
     public Student(String name) {
         this.name = name;
         this.grades = new ArrayList<>();
         this.attendance = new HashMap<>();
+
     }
+//
+//    public Student(double perc){
+//        this.percentages = perc;
+//    }
 
     public String getName() {
         return name;
@@ -41,15 +47,25 @@ public class Student {
 
         return total / this.grades.size();
     }
+//    Student st = new Student("carol");
 
     public void recordAttendance(String date, String value) {
         this.attendance.put(date, value);
     }
 
+
+
+//public double percentagesAttendace(){
+//      int totalDays = 30;
+//      for (double perc : this.recordAttendance("23/23/23".);
+//
+//}
+
+
+
     public static void main(String[] args) {
 
         HashMap<String, Student> students = new HashMap<>();
-//        HashMap<String, String> attendance =new HashMap<>();
         Input input = new Input();
 
         Student carlo = new Student("Carlo");
@@ -80,17 +96,25 @@ public class Student {
         jessica.recordAttendance("09/20/17","A");
         students.put("jessica",jessica);
 
+        Student alfie = new Student("alfie");
+        alfie.addGrade(10);
+        alfie.addGrade(10);
+        alfie.addGrade(10);
+        students.put("alfie",alfie);
+        alfie.recordAttendance("10/20/2017","A");
+
         do {
 
 
-            System.out.println("Welcome!\n" + "Here are the user names of our students:");
+            System.out.println("Welcome!\n");
+            System.out.println("Here are the user names of our students:" +"\n");
 
 
             for (String names : students.keySet()) {
-                System.out.println(names);
+                System.out.println(" - " + names + "\n") ;
             }
 
-            String userInput = input.getString("What Student would you like to see more on?");
+            String userInput = input.getString("What Student would you like to see more on?" +"\n");
 
 
 
@@ -103,7 +127,7 @@ public class Student {
                         " - current grades: " +
                         students.get(userInput).getGrade() +
                         " - Attendance: " +
-                        students.get(userInput).attendance);
+                        students.get(userInput).attendance +"\n");
 
         }
             else {

@@ -4,7 +4,7 @@ import util.Input;
 
 public class CircleApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
         Input input = new Input();
 
