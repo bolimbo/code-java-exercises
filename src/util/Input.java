@@ -20,20 +20,22 @@ public class Input {
 
     }
 
-
-
-    public int getInt() {
-        if (this.scan.hasNextInt()) {
-            return this.scan.nextInt();
-
-        } else {
-            System.out.println("Invalid input");
+    public int getInt()  {
+        System.out.println("get integer?");
+        String a = scan.nextLine();
+        try{
+            System.out.println(a);
+            return Integer.valueOf(a);
+        }catch (NumberFormatException e){
+            System.out.println("Invalid Input");
+            return getInt();
+        } catch (Exception e){
+            System.out.println("Invalid Input");
             return getInt();
         }
-
     }
 
-    public int getInt(int min, int max) {
+    public int getInt(int min, int max) throws Exception {
       int userInput = getInt();
         if (userInput < min || userInput > max){
         System.out.println(userInput + " is not between " +  min + " and " + max);
@@ -52,30 +54,40 @@ public class Input {
             }
         } while (str2 < min || str2 > max);
         return str2;
-
     }
 
 
-    public double getDouble() {
- if (this.scan.hasNextDouble()){
- return this.scan.nextDouble();
-    } else {
-     System.out.println("that s not a double try again");
- }
-        return getDouble();
+    public double getDouble() throws NumberFormatException {
+        System.out.println("get Decimal?");
+
+      String  b = scan.nextLine();
+
+        try{
+            System.out.println(b);
+            return Double.valueOf(b);
+        }catch (NumberFormatException e){
+            System.out.println(e.getMessage());
+            System.out.println(e + "not a decimal");
+            return getDouble();
+        }
+        catch (Exception e){
+            System.out.println("not an valid decimal");
+            return getDouble();
+        }
     }
 
 
-    public static void main(String[] args) {
-//        Input input = new Input();
-//        input.getInt(0, 100);
+    public static void main(String[] args) throws Exception {
+        Input input = new Input();
+        input.getInt(0, 100);
 //        System.out.println("number entered " + input.getInt());
 //        input.getDouble(0.0, 100.0);
-//        input.getDouble();
+        input.getDouble();
 //        input.yesNo();
 //        input.getString("carlo");
         int x = 5 * 4 % 3;
         System.out.println();
 
     }
+
 }

@@ -5,7 +5,7 @@ package util;
 //methods from input go here
 
 public class InputTest {
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         Input input = new Input();
 
         System.out.println("Enter a nmber between 1 and 10");
